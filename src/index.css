@@ -2,7 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
+*::selection{
+  color: #02042b;
+  background-color: #d04742;
+}
 body {
 
   margin: 0;
