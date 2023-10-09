@@ -4,7 +4,6 @@ const Donor = require("../models/Donor");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-
 require('dotenv').config({ path: './.env' });
 router.post("/register", async (req, res) => {
   try {
@@ -28,9 +27,8 @@ router.post("/register", async (req, res) => {
     });
 
     await newDonor.save();
-    const jwtSecretKey = process.env.DONOR_JWT_SECRET; //key from the environment variable
+    const jwtSecretKey = process.env.JWT_SECRET; //key from the environment variable
     const token = jwt.sign({ id: newDonor._id }, jwtSecretKey);
-    console.log(process.env.DONOR_JWT_SECRET)
 
     res.status(201).json({ token });
   } catch (error) {
