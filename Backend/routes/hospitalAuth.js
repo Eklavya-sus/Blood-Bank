@@ -3,8 +3,9 @@ const router = express.Router();
 const Hospital = require("../models/Hospital");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const fetchHospital = require("../middleware/fetchHospital");
 
-
+//
 require('dotenv').config({ path: './.env' });
 router.post("/register", async (req, res) => {
   try {
@@ -61,5 +62,17 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+//ROUTE 3: Get loggedin hospital details using: POST "/api/auth/getuser". Login required
+router.post("/getdonor", fetchHospital,  async (req, res) => {
+  try {
+    const userid = req.user.id;
+    const user = await User.findById(req.user.id).select("password");
+    res.send(user);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+  });
 
 module.exports = router;
