@@ -1,28 +1,27 @@
-import React from 'react'
-
-
+import React from 'react';
+import {Link} from "react-router-dom";
+import h2 from '../images/h2.jpg';
 export default function Homepage() {
   return (
     <div>
     <div className='bg-[#02042b]'>
       <div className="bg-[#02042b] w-10/12 md:w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row items-center justify-between -mt-[0.5px]">
       <div className="space-y-8 my-16 lg:my-0">
-          <h1 className= "font-extrabold text-[115px] leading-[1.1] text-white mx-[-10px] mt-[-5%]">
-            BLOOD <br></br>
-            BANK
+          <h1 className= "font-extrabold text-[90px] leading-[1.1] text-white mx-[-10px] mt-[-5%]">
+            BLOODLINK <br></br>
+            PRO
           </h1>
           <div className="w-6 h-1 bg-[#d04742] px-[30px]"></div>
-          <p className="text-[18px] leading-7 text-white opacity-70">
+          <p className="text-[18px] leading-7 text-white opacity-70 pb-6">
           Save lives through seamless blood management. Collect vital donations from generous donors. Distribute life-saving resources to healthcare providers. Never run dry on the gift of life
           </p>
-          <button className="bg-[#d04742] active:scale-90 text-white py-[14px] px-[18px] rounded-md font-bold hover:bg-[#a42524] transition-all duration-200">Sign Up Now</button>
-      
-          
+          <Link to ='/register' className='mt-6'>
+          <button className="bg-[#d04742] active:scale-90 text-white py-[12px] px-[18px] rounded-md font-bold hover:bg-[#a42524] transition-all duration-200">Sign Up Now</button>
+          </Link>
         </div>
         <img src="./Image.png"  loading="lazy"
           className="w-full max-w-[680px]"
         />
-        
       </div>
       
     </div>
@@ -89,42 +88,42 @@ export default function Homepage() {
           ></div>
           <div className="flex flex-col justify-between items-start w-full">
             <h3
-              className=" text-xl md:leading-10 md:text-[28px] font-bold md:max-w-[500px] max-w-[190px]"
+              className=" text-xl md:leading-10 md:text-[28px] font-bold md:max-w-[500px] w-[320px]"
             >
-              Supercharge your business with the all‑powerful
-              <span className="text-[#d04742]"> Payment Gateway</span>
+              Why Should You Donate Your
+              <span className="text-[#d04742]"> Blood?</span>
             </h3>
             <div className="w-6 h-1 bg-[#d04742] px-[30px]"></div>
             <ul className="space-y-2 my-6 md:my-0">
               <li className=" flex items-center space-x-2">
 
-                <span>100+ Payment Methods</span>
+                <span>Blood donation directly saves lives.</span>
               </li>
               <li className=" flex items-center space-x-2">
 
-                <span> Industry Leading Success Rate </span>
+                <span> Help your community and loved ones </span>
               </li>
               <li className=" flex items-center space-x-2">
 
-                <span> Superior Checkout Experience </span>
+                <span>  Ensure a constant blood supply.</span>
               </li>
               <li className=" flex items-center space-x-2">
 
-                <span> Easy to Integrate </span>
+                <span> Reduce your risk of health conditions. </span>
               </li>
               <li className=" flex items-center space-x-2">
 
-                <span> Instant Settlements from day 1 </span>
+                <span> Feel good about making a difference. </span>
               </li>
               <li className=" flex items-center space-x-2">
 
-                <span> In-depth Reporting and Insights </span>
+                <span>  One donation can save lives and renew naturally. </span>
               </li>
             </ul>
             <div
               className="w-full md:w-fit flex flex-col-reverse md:flex-row md:items-center md:space-x-4 gap-y-4 md:space-y-0"
             >
-              <button
+              <Link to='/register'
                 className="bg-[#d04742] active:scale-90 w-full md:w-fit flex items-center justify-center md:justify-start text-white py-[14px] px-[18px] rounded-md font-bold hover:bg-[#a42524] transition-all duration-200"
               >
                 Sign Up Now
@@ -138,7 +137,7 @@ export default function Homepage() {
                     d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
                   ></path>
                 </svg>
-              </button>
+              </Link>
               <div className="flex items-center cursor-pointer group ">
                 <a
                   href="#"
@@ -149,179 +148,176 @@ export default function Homepage() {
             </div>
           </div>
           <img
-            src="./Image.png"  loading="lazy"
+            src={h2}  loading="lazy"
             alt="payment suite"
-            className="hidden md:block md:max-w-[400px] lg:max-w-[600px] absolute right-0 lg:top-0 bottom-0"
+            className="hidden md:block md:max-w-[400px] lg:max-w-[600px] absolute right-0 lg:top-0 bottom-0 mt-8 "
           />
         </div>
 
         <div
           className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10"
         >
-
-          <div className="w-full min-h-[15rem] relative cursor-pointer featureCard">
-
-            
-
-            <svg
-              viewBox="0 0 349.32501220703125 225"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              className="stroke-1 stroke-[#818597] h-full w-full absolute z-[90] featureCardSVG transition-all duration-200"
-
-            >
-              <path
-                d="m 0 6 
-              a 6 6 0 0 1 6 -6 
-              h 250.32501220703125 
-              a 16 16 0 0 1 11 5 
-              l 77 77 
-              a 16 16 0 0 1 5 11 
-              v 126 
-              a 6 6 0 0 1 -6 6 
-              h -337.32501220703125 
-              a 6 6 0 0 1 -6 -6 
-              z"
-                fill="#fff"
-              ></path>
-            </svg>
-
-            <div
-              className="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between featureCardBox"
-            >
-              <div>
-                <h3
-                  className=" text-[#d04742] font-extrabold  leading-[1.2] text-[1.375rem]"
-                >
-                  Become a Donor
-                </h3>
-                <p className=" text-grayText mt-6">
-                Lorem Ipsum is simply dummy text of the print-
-                ing and typesetting industry. Lorem Ipsum has
-                been the industry's standard.
-                </p>
-              </div>
-              <div className="flex items-center cursor-pointer place-items-end">
-                <a
-                  href="#"
-                  className=" active:scale-90 font-bold text-[#d04742] transition-all duration-200"
-                  >Know More</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full min-h-[15rem] relative cursor-pointer featureCard">
-
-            
-
-            <svg
-              viewBox="0 0 349.32501220703125 225"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              className="stroke-1 stroke-[#818597] h-full w-full absolute z-[90] featureCardSVG transition-all duration-200"
-
-            >
-              <path
-                d="m 0 6 
-              a 6 6 0 0 1 6 -6 
-              h 250.32501220703125 
-              a 16 16 0 0 1 11 5 
-              l 77 77 
-              a 16 16 0 0 1 5 11 
-              v 126 
-              a 6 6 0 0 1 -6 6 
-              h -337.32501220703125 
-              a 6 6 0 0 1 -6 -6 
-              z"
-                fill="#fff"
-              ></path>
-            </svg>
-
-            <div
-              className="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between featureCardBox"
-            >
-              <div>
-                <h3
-                  className="font-extrabold text-[#d04742] leading-[1.2] text-[1.375rem]"
-                >
-                  Why Give Blood?
-                </h3>
-                <p className="text-grayText mt-6">
-                Lorem Ipsum is simply dummy text of the print-
-                ing and typesetting industry. Lorem Ipsum has
-        been the industry's standard.
-                </p>
-              </div>
-              <div className="flex items-center cursor-pointer place-items-end">
-                <a
-                  href="#"
-                  className="active:scale-90 font-bold text-[#d04742] transition-all duration-200"
-                  >Know More</a
-                >
-                
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full min-h-[15rem] relative cursor-pointer featureCard">
-
-            
-
-            <svg
-              viewBox="0 0 349.32501220703125 225"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              className="stroke-1 stroke-[#818597] h-full w-full absolute z-[90] featureCardSVG transition-all duration-200"
-
-            >
-              <path
-                d="m 0 6 
-              a 6 6 0 0 1 6 -6 
-              h 250.32501220703125 
-              a 16 16 0 0 1 11 5 
-              l 77 77 
-              a 16 16 0 0 1 5 11 
-              v 126 
-              a 6 6 0 0 1 -6 6 
-              h -337.32501220703125 
-              a 6 6 0 0 1 -6 -6 
-              z"
-                fill="#fff"
-              ></path>
-            </svg>
-
-            <div
-              className="z-[1000]  absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between featureCardBox"
-            >
-              <div>
-                <h3
-                  className=" font-extrabold text-[#d04742] leading-[1.2] text-[1.375rem]"
-                >
-                  How Your Donation Helps
-                </h3>
-                <p className="mt-6">
-                Lorem Ipsum is simply dummy text of the print-
-                ing and typesetting industry. Lorem Ipsum has
-                been the industry's standard.
-                </p>
-              </div>
-              <div className="flex items-center cursor-pointer place-items-end">
-                <a
-                  href="#"
-                  className=" active:scale-90 font-bold text-[#d04742] transition-all duration-200"
-                  >Know More</a
-                >
-                
-              </div>
-            </div>
-          </div>
-
-
-          
         </div>
       </div>
     </section>
+<link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+
+<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+   <div class="container">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div className="bg-white rounded-lg overflow-hidden mb-10">
+               <img
+                  src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                  alt="image"
+                  class="w-full"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        "
+                        >
+                     50+ Best creative website themes & templates
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                     Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                     elit. Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     inline-block
+                     py-2
+                     px-7
+                     border border-[#E5E7EB]
+                     rounded-full
+                     text-base text-body-color
+                     font-medium
+                     hover:border-primary hover:bg-primary hover:text-white
+                     transition
+                     "
+                     >
+                  View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10">
+               <img
+                  src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                  alt="image"
+                  class="w-full"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        "
+                        >
+                     The ultimate UX and UI guide to card design
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                     Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                     elit. Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     inline-block
+                     py-2
+                     px-7
+                     border border-[#E5E7EB]
+                     rounded-full
+                     text-base text-body-color
+                     font-medium
+                     hover:border-primary hover:bg-primary hover:text-white
+                     transition
+                     "
+                     >
+                  View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10">
+               <img
+                  src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                  alt="image"
+                  class="w-full"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        "
+                        >
+                     Creative Card Component designs graphic elements
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                     Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                     elit. Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     inline-block
+                     py-2
+                     px-7
+                     border border-[#E5E7EB]
+                     rounded-full
+                     text-base text-body-color
+                     font-medium
+                     hover:border-primary hover:bg-primary hover:text-white
+                     transition
+                     "
+                     >
+                  View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
   </div>
 
   )
