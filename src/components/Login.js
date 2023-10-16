@@ -21,7 +21,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="max-w-md mx-auto mt-8 p-4 border border-gray-300 rounded-lg">
+      <div class="min-h-screen bg-02042b py-6 flex flex-col justify-center items-center relative overflow-hidden sm:py-12 bg-[#02042b]">
+       
+      <div class="relative px-6 pt-10 pb-8 bg-white shadow-xl ring-1 ring-gray-900/5 sm:max-w-lg sm:mx-auto sm:rounded-lg sm:px-10 md:landscape:w-4/5 lg:w-1/2">
+    
         <h1 className="text-2xl font-bold mb-4">User Login</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="mb-4">
@@ -53,6 +56,7 @@ class Login extends Component {
             </button>
           </div>
         </form>
+      </div>
       </div>
     );
   }
