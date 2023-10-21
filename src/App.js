@@ -6,18 +6,20 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
+import MydonorInfo from './components/MydonorInfo';
 
 function App() {
 
   return (
     <div className="app">
-        <Navbar />
+        {/* <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
-<Footer />
+<Footer /> */}
+<MydonorInfo />
     </div>
   );
 }
